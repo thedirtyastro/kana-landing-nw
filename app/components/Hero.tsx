@@ -113,7 +113,7 @@ const Hero = () => {
         </motion.span>
         <motion.span
           variants={itemVariants}
-          className="font-normal text-[80px] leading-4xl text-white/90"
+          className="font-normal  leading-4xl text-white/90"
         >
           with CEX-like performance
         </motion.span>
@@ -153,7 +153,7 @@ const Hero = () => {
       </div>
       <motion.div
         variants={imageVariants}
-        className="w-full md:w-[40%] flex items-end justify-end mt-10 md:mt-0"
+        className="hidden md:flex w-[40%] items-end justify-end mt-10 md:mt-0"
       >
         <Image src={Background} alt="Hero Image" />
       </motion.div>

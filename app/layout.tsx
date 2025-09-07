@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Poppins, Victor_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -7,12 +7,18 @@ export const metadata: Metadata = {
   description: "A simple landing page built with Next.js and Tailwind CSS",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1, // prevents unwanted zooming
+  userScalable: false, // disables pinch zoom if you want that
+};
+
 const victorMono = Victor_Mono({
   subsets: ["latin"],
   variable: "--font-victor-mono",
   display: "swap",
 });
-
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -29,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${victorMono.variable}  bg-[#020E16] antialiased`}
+        className={`${poppins.variable} ${victorMono.variable} bg-[#020E16] antialiased`}
       >
         {children}
       </body>

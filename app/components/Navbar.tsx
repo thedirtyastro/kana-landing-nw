@@ -33,7 +33,7 @@ const Navbar = () => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className="fixed top-6 left-0 right-0 flex justify-between items-center py-4 px-6 text-white 
       bg-gradient-to-br from-white/20 to-white/5 border border-white/20 
-      w-[95%] mx-auto rounded-lg shadow-lg z-50 backdrop-blur-lg"
+      w-[95%] max-w-[1800px] mx-auto rounded-lg shadow-lg z-50 backdrop-blur-lg"
     >
       {/* Logo (clickable to home) */}
       <Link href="/">
@@ -42,10 +42,10 @@ const Navbar = () => {
 
       {/* Nav items */}
       <div className="flex items-center gap-8 text-lg font-medium">
-        <Link href="https://medium.com/kana-labs" className="hover:text-primary-300 transition">
+        <Link href="https://medium.com/kana-labs" className="hover:text-primary-300 transition hidden md:inline">
           Blog
         </Link>
-        <Link href="https://docs.kanalabs.io/" className="hover:text-primary-300 transition">
+        <Link href="https://docs.kanalabs.io/" className="hover:text-primary-300 transition hidden md:inline">
           Docs
         </Link>
 
